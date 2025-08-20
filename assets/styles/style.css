@@ -19,3 +19,15 @@
     border-radius: 20px;
 }
 
+.signInPage{
+    background-image: url(/assets/img/signInBgImg.jpeg);
+    background-size: cover;
+}
+
+.signSec{
+    background-color: rgba(101, 101, 101, 0.268);
+    width: 500px;
+    height: 410px;
+    margin-left: 500px;
+    border-radius: 20px;
+}
