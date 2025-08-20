@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Carter+One&family=Dancing+Script:wght@400..700&family=Hammersmith+One&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Onest:wght@100..900&family=Rammetto+One&family=Rowdies:wght@300;400;700&family=Satisfy&display=swap');
+
+.navName {
+    font-family: "Carter One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contactPage{
+    background-image: url(/assets/img/contactBgImg.jpg);
+    background-size: cover;
+}
+
+.contactSec{
+    background-color: rgba(101, 101, 101, 0.268);
+    width: 500px;
+    height: 410px;
+    margin-left: 500px;
+    border-radius: 20px;
+}
+
