@@ -7,7 +7,7 @@
 }
 
 .contactPage{
-    background-image: url(/assets/img/contactBgImg.jpg);
+    background-image: url(./assets/img/contactBgImg.jpg);
     background-size: cover;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .signInPage{
-    background-image: url(/assets/img/signInBgImg.jpeg);
+    background-image: url(./assets/img/signInBgImg.jpeg);
     background-size: cover;
 }
 
