@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body class="bg-[#010113] font-sans text-white">
+<body class="bg-black font-sans text-white">
 
     <header>
         <nav class="bg-white border-gray-100 dark:bg-[#010113]">
@@ -21,12 +21,13 @@
                         class="self-center text-[26px] font-semibold whitespace-nowrap dark:text-[#12cfbe] navName">Flixora</span>
                 </a>
                 <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <a href="./signIn.html">
-                        <button type="button"
-                            class="text-black bg-[#12cfbe] hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-[#12cfbe] dark:hover:bg-white dark:focus:ring-gray-200">Log
-                            In
-                        </button>
-                    </a>
+                    <input type="text" id="search-navbar"
+                        class="mr-5 block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search...">
+                    <button type="button" id="search-btn"
+                        class="text-black bg-[#12cfbe] hover:bg-gray-300 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-[#12cfbe] dark:hover:bg-white dark:focus:ring-gray-200">Search
+                    </button>
+
                     <button data-collapse-toggle="navbar-cta" type="button"
                         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                         aria-controls="navbar-cta" aria-expanded="false">
@@ -51,8 +52,9 @@
                                 class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#12cfbe] md:dark:hover:text-[#12cfbe] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Explore</a>
                         </li>
                         <li>
-                            <a href="./about.html"
-                                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#12cfbe] md:dark:hover:text-[#12cfbe] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                            <a href="./signIn.html"
+                                class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#12cfbe] md:dark:hover:text-[#12cfbe] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Log
+                                In</a>
                         </li>
                         <li>
                             <a href="./contact.html"
@@ -64,27 +66,27 @@
         </nav>
     </header>
 
-    <!-- Carousel Section -->
 
-    <section>
-        <div id="gallery" class="relative w-full" data-carousel="slide">
+    <!-- Carousel Section -->
+    <section class="flex items-center justify-center mt-10">
+        <div id="gallery" class="relative w-full max-w-7xl" data-carousel="slide">
             <!-- Carousel wrapper -->
-            <div class="relative h-96 overflow-hidden rounded-lg md:h-[42em]">
+            <div class="relative h-96 overflow-hidden rounded-lg md:h-[40rem]">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./assets/img/movie_1.jpg" class="w-full h-full object-cover" alt="">
+                    <img src="./assets/img/movieMainPic_2.webp" class="w-full h-full object-cover" alt="">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="./assets/img/movie_2.jpg" class="w-full h-full object-cover" alt="">
+                    <img src="./assets/img/movieMainPic.jpeg" class="w-full h-full object-cover" alt="">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./assets/img/movie_3.webp" class="w-full h-full object-cover" alt="">
+                    <img src="./assets/img/movieMainPic_3.jpg" class="w-full h-full object-cover" alt="">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="./assets/img/movie_4.jpg" class="w-full h-full object-cover" alt="">
+                    <img src="./assets/img/movieMainPic_4.jpg" class="w-full h-full object-cover" alt="">
                 </div>
             </div>
             <!-- Slider controls -->
@@ -118,16 +120,23 @@
     </section>
 
 
+    <section>
+        <div id="searchRes" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 px-6 mt-20"></div>
+    </section>
+
+
+
     <section><br><br><br><br>
-        <h1 class="text-4xl">Anywhere at Anytime</h1>
+        <h1 class="text-4xl text-center">Anywhere at Anytime</h1>
+        <p class="text-center mt-5 mb-5">“Flixora lets you enjoy movies without limits — watch anytime, anywhere, on any
+            device. <br> Your entertainment, your way.”</p>
 
         <div
             class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px]">
             <div class="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
-                <img src="./assets/img/movie.jpeg"
-                    class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
-                <img src="./assets/img/movie.jpeg"
-                    class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg" alt="">
+                <img src="./assets/img/movie.jpeg" class="dark:hidden h-[156px] md:h-[278px] w-full rounded-lg" alt="">
+                <img src="./assets/img/movie.jpeg" class="hidden dark:block h-[156px] md:h-[278px] w-full rounded-lg"
+                    alt="">
             </div>
         </div>
         <div
@@ -139,356 +148,10 @@
 
     </section>
 
-    <!-- What To Watch Section -->
-    <br><br><br><br>
-    <section>
-        <h1 class="text-4xl">What to watch</h1> <br><br><br><br><br>
 
-        <div class="flex gap-14 ml-16 ">
-
-            <!-- Movie 1 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/avatarMovie.jpeg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Avater
-                        </h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Movie 2 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/SpiderManMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Spider
-                            Man</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Movie 3 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/superManMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Super
-                            Man</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Movie 4 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/finalDestinationMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Final
-                            Destination</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Movie 5 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/iKnowWhatYouDidMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">I Know
-                            What You Did</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- Top Picks -->
-    <br><br><br><br>
-    <section class="bg-gradient-to-r from-black via-gray-900">
-        <h1 class="text-4xl">Top Picks</h1> <br><br><br><br><br>
-
-        <div class="flex gap-14 ml-16">
-
-            <!-- Movie 1 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/doctorStrangeMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Doctor
-                            Strange</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Movie 2 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/sandmanMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Sand Man
-                        </h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Movie 3 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/nobodyMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Nobody -
-                            2</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Movie 4 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/f1Movie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">f1</h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Movie 5 -->
-
-            <div
-                class="w-[14rem] h-[29rem] max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-600 dark:border-gray-700">
-                <a href="#">
-                    <img class="p-0 rounded-t-lg" src="./assets/img/sherlockMovie.jpg" alt="product image" />
-                </a>
-                <div class="px-5 pb-5">
-                    <div class="flex items-center mt-2.5 mb-3">
-                        <div class="flex items-center space-x-1 rtl:space-x-reverse">
-                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor" viewBox="0 0 22 20">
-                                <path
-                                    d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                            </svg>
-                        </div>
-                        <span
-                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-sm dark:bg-blue-200 dark:text-black ms-3">5.0</span>
-                    </div>
-                    <a href="#">
-                        <h5 class="text-[18px] font-semibold tracking-tight text-gray-900 dark:text-white mb-2">Sherlock
-                        </h5>
-                    </a>
-
-                    <div class="flex items-center justify-between">
-                        <a href="#"
-                            class="text-black bg-[#12cfbe] hover:bg-[#12cfbe] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#12cfbe] dark:hover:bg-gray-100 dark:focus:ring-[#12cfbe]">Watch
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br><br><br><br><br><br>
-    </section>
-
-
+    <br><br><br><br><br><br><br><br><br>
     <footer class="bg-white dark:bg-[#010113]">
-        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class=" mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="https://flowbite.com/" class="flex items-center">
@@ -590,8 +253,7 @@
 
 
 
-
-
+    <script src="./assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
